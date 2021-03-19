@@ -3,6 +3,7 @@ import { Text, View, Image, ImageBackground, SafeAreaView, TextInput, Button, Al
 import { styles } from '../styles/styles.js';
 import { buttonSession } from '../appfunc/startSession.js';
 
+
 const Separator = () => (
     <View style={styles.separator} />
 );

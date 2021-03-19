@@ -3,7 +3,31 @@ import { StyleSheet} from "react-native";
 export const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: "#000000"
+        
+    },
+    containerHome: {
+        flex: 1,
+                
+    },
+    containerHome_1: {
+        flex: 1,
+        flexDirection: "row"      
+    },
+    containerHome_2: {
+        flex: 11,
+        
+    },
+    boxHeaderHome:{
+        flex: 1,
+        backgroundColor: "#000000",
+        justifyContent: "space-around",
+        
+    },
+    boxHeaderHome_2:{
+        flex: 2,
+        backgroundColor: "#000000",
+        justifyContent: "space-around",
+        
     },
     tittle: {
         fontSize: 30,
