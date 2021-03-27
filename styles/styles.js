@@ -29,6 +29,82 @@ export const styles = StyleSheet.create({
         justifyContent: "space-around",
         
     },
+    containerOptions: {
+        flex: 1,
+        flexDirection: "column"      
+    },
+    boxOptions_1: {
+        flex: 1,
+        backgroundColor: "#ffffff",
+        justifyContent: "space-around", 
+        flexDirection: "row", 
+    },
+    boxOptions_2: {
+        flex: 1,
+        backgroundColor: "#ffffff",
+        justifyContent: "space-around", 
+        flexDirection: "row",   
+    },
+    boxOptions_3: {
+        flex: 1,
+        backgroundColor: "#ffffff",
+        justifyContent: "space-around", 
+        flexDirection: "row",   
+    },
+    boxOptions_4: {
+        flex: 1,
+        backgroundColor: "#ffffff",
+        justifyContent: "space-around", 
+        flexDirection: "row",
+    },
+    boxOptions_5: {
+        flex: 1,
+        backgroundColor: "#ffffff",
+        justifyContent: "space-around", 
+        flexDirection: "row",   
+    },
+    boxOptions_6: {
+        flex: 1,
+        backgroundColor: "#ffffff",
+        justifyContent: "space-around", 
+        flexDirection: "row",   
+    },
+    boxOptions_7: {
+        flex: 1,
+        backgroundColor: "#ffffff",
+        justifyContent: "space-around", 
+            
+    },
+    boxOptions_8: {
+        flex: 1,
+        backgroundColor: "#ffffff",
+        justifyContent: "space-around", 
+        flexDirection: "row",   
+    },
+    boxOptions_9: {
+        flex: 1,
+        backgroundColor: "#ffffff",
+        justifyContent: "space-around", 
+            
+    },
+    boxSubOptions_1: {
+        flex: 1,
+        backgroundColor: "#ffffff",
+        justifyContent: "space-around",
+        alignItems: "center", 
+            
+    },
+    boxSubOptions_2: {
+        flex: 5,
+        backgroundColor: "#ffffff",
+        justifyContent: "space-around", 
+            
+    },
+    closeSesionButton:{
+        backgroundColor: "#ffffff",
+        
+        
+    },
     tittle: {
         fontSize: 30,
         color: "#fff"

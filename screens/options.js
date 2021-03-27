@@ -1,18 +1,128 @@
 import React from "react";
 import { Text, View, Image, ImageBackground, SafeAreaView, TextInput, Button, Alert, StatusBar } from "react-native";
 import { styles } from '../styles/styles.js';
+import { AntDesign } from '@expo/vector-icons';
+import { MaterialIcons } from '@expo/vector-icons';
+import { Ionicons } from '@expo/vector-icons'; 
+import { buttonSession } from '../appfunc/startSession.js';
 import { LogoTitle } from '../appfunc/logoTitle.js';//En un futuro debo implementar esto para el Logo.
+import App from "../App.js";
 
 
 function optionScreen({ navigation }) {
 
     return (
+            
+                <View style={styles.containerOptions}>
+                    <View style={styles.boxOptions_1}>
+                         <View style={styles.boxSubOptions_1}>
+                         <MaterialIcons name="local-shipping" size={24} color="black" />
+                        </View>
+                        <View style={styles.boxSubOptions_2}>
+                        <Button
+                            onPress={() => Alert.alert('Pantalla local-shipping')}
+                            title="Pedidos"
+                            color="#000000"
+                        />
+                        </View>
+                        <View style={styles.boxSubOptions_1}>
+                         
+                        </View>
+                    </View>
+                    <View style={styles.boxOptions_2}>
+                        <View style={styles.boxSubOptions_1}>
+                        <MaterialIcons name="notifications-none" size={24} color="black" />
+                        </View>
+                        <View style={styles.boxSubOptions_2}>
+                        <Button
+                            onPress={() => Alert.alert('Pantalla notifications')}
+                            title="Notificaciones"
+                            color="#000000"
+                        />
+                        </View>
+                        <View style={styles.boxSubOptions_1}>
+                         
+                        </View>
+                    </View>
+                    <View style={styles.boxOptions_3}>
+                        <View style={styles.boxSubOptions_1}>
+                        <AntDesign name="user" size={24} color="black" />
+                        </View>
+                        <View style={styles.boxSubOptions_2}>
+                        <Button
+                            onPress={() => Alert.alert('Pantalla User')}
+                            title="Usuario"
+                            color="#000000"
+                        />
+                        </View>
+                        <View style={styles.boxSubOptions_1}>
+                         
+                        </View>
+                    </View>
+                    <View style={styles.boxOptions_4}>
+                        <View style={styles.boxSubOptions_1}>
+                        <Ionicons name="help-buoy-outline" size={24} color="black" />
+                        </View>
+                        <View style={styles.boxSubOptions_2}>
+                        <Button
+                            onPress={() => Alert.alert('Pantalla help')}
+                            title="Ayuda"
+                            color="#000000"
+                        />
+                        </View>
+                        <View style={styles.boxSubOptions_1}>
+                         
+                        </View>
+                    </View>
+                    <View style={styles.boxOptions_5}>
+                        <View style={styles.boxSubOptions_1}>
+                        <AntDesign name="infocirlceo" size={24} color="black" />
+                        </View>
+                        <View style={styles.boxSubOptions_2}>
+                        <Button
+                            onPress={() => Alert.alert('Pantalla informations')}
+                            title="Informaciones"
+                            color="#000000"
+                        />
+                        </View>
+                        <View style={styles.boxSubOptions_1}>
+                         
+                        </View>
+                    </View>
+                    <View style={styles.boxOptions_6}>
+                        <View style={styles.boxSubOptions_1}>
+                           
+                        </View>
+                        <View style={styles.boxSubOptions_2}>
+                        
+                        </View>
+                    </View>
+                    <View style={styles.boxOptions_7}>
+                        
+                    </View>
+                    <View style={styles.boxOptions_8}>
+                        <View style={styles.boxSubOptions_1}>
+                        <Ionicons name="exit" size={24} color="black" />
+                        </View>
+                        <View style={styles.boxSubOptions_2}>
+                        <Button
+                            onPress={() => navigation.navigate('Front')}
+                            title="Cerrar sesion"
+                            color="#D16002"
+                            style={styles.closeSesionButton}
+                            
+                        />
+                        </View>
+                        <View style={styles.boxSubOptions_1}>
+                         
+                        </View>
+                    </View>
+                    <View style={styles.boxOptions_9}>
 
-        <View style={styles.containerHome}>
-            <ImageBackground source={require('../images/Fondo2.jpg')} style={styles.imageInBack}>
-                <Text>Pantalla optionScreen</Text>
-            </ImageBackground>
-        </View >
+                    </View>
+                </View>
+        
+        
     );
 }
 export { optionScreen }
