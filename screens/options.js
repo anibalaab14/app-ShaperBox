@@ -6,7 +6,7 @@ import { MaterialIcons } from '@expo/vector-icons';
 import { Ionicons } from '@expo/vector-icons'; 
 import { buttonSession } from '../appfunc/startSession.js';
 import { LogoTitle } from '../appfunc/logoTitle.js';//En un futuro debo implementar esto para el Logo.
-import App from "../App.js";
+import { getBoxesHistory } from '../appfunc/getBoxesHistory.js';
 
 
 function optionScreen({ navigation }) {
@@ -20,7 +20,16 @@ function optionScreen({ navigation }) {
                         </View>
                         <View style={styles.boxSubOptions_2}>
                         <Button
-                            onPress={() => Alert.alert('Pantalla local-shipping')}
+                            onPress={() => {
+
+                                if (getBoxesHistory() == 0) {
+                                    Alert.alert('Obtiene JSON con pedidos');
+                                    navigation.navigate('MyBoxesHistory');//Se debe crear esta pantalla aun.
+                                } else {
+                                    Alert.alert('No tienes historial en ShaperBox');
+                                }
+        
+                            }}
                             title="Pedidos"
                             color="#000000"
                         />

@@ -15,7 +15,10 @@ export const styles = StyleSheet.create({
     },
     containerHome_2: {
         flex: 11,
-        
+        alignItems: "center",
+
+        alignSelf:"center",
+        flexDirection: "row" 
     },
     boxHeaderHome:{
         flex: 1,
@@ -27,6 +30,7 @@ export const styles = StyleSheet.create({
         flex: 2,
         backgroundColor: "#000000",
         justifyContent: "space-around",
+         
         
     },
     containerOptions: {
