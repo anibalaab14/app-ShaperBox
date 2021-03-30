@@ -146,6 +146,21 @@ export const styles = StyleSheet.create({
         textAlign: "center",
         
     },
+    registerInput: {
+        height: 40,
+
+        backgroundColor: "#FFF",
+        borderTopLeftRadius: 15,
+        borderTopRightRadius: 15,
+        borderBottomRightRadius: 15,
+        borderBottomLeftRadius: 15,
+        borderLeftWidth: 1,
+        borderTopWidth: 1,
+        borderRightWidth: 1,
+        borderBottomWidth: 1,
+        textAlign: "center",
+        
+    },
     initForm: {
         alignContent: "center",
         alignSelf: "center"

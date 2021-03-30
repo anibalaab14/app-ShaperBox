@@ -65,7 +65,7 @@ function frontPage({ navigation }) {
                 <Button
                     title="Suscríbete"
                     color="#D16002"
-                    onPress={() => Alert.alert('Dispara JSON api-registro-usuario')}
+                    onPress={() => navigation.navigate('Register')}
                 />
                 <Separator />
             </ImageBackground>
