@@ -12,6 +12,7 @@ const newUser = async (
 ) => {
     try {
         console.log("antes de request");
+        console.log(URL_CREATEUSERS);
         let response = await fetch(
             `${URL_CREATEUSERS}`
             , {

@@ -49,12 +49,34 @@ function frontPage({ navigation }) {
                     //onPress={() => Alert.alert('Dispara JSON api-inicio-sesion')}
                     onPress={() => {
 
-                        if (buttonSession(textUser, textPass) == 0) {
+                        buttonSession(textUser, textPass)
+                        .then(resp => {
+                    
+                            console.log(resp);
+
+                            if (resp.statusCode==undefined){
+                                Alert.alert('Bienvenido '+resp.name);
+                                navigation.navigate('Home');
+                            }
+                            if (resp.statusCode==204){
+                                Alert.alert('Usuario invalido');
+                                
+                            }
+                            if (resp.statusCode==203){
+                                Alert.alert('Password incorrecta');
+                                
+                            }
+                            
+                        })
+                        .catch(err => {
+                            console.log(err);
+                            Alert.alert('Dispara JSON api-inicio-sesion');
+                        });
+                        
+                        /*if (buttonSession(textUser, textPass) == 0) {
                             Alert.alert('Dispara JSON api-inicio-sesion');
                             navigation.navigate('Home');
-                        } else {
-                            Alert.alert('Credenciales incorrectas');
-                        }
+                        }*/
 
                     }}
 
