@@ -1,4 +1,4 @@
-import React from "react";
+import React, {Component} from "react";
 import { Text, View, Image, ImageBackground, SafeAreaView, TextInput, Button, Alert, StatusBar } from "react-native";
 import { styles } from '../styles/styles.js';
 import { LogoTitle } from '../appfunc/logoTitle.js';//En un futuro debo implementar esto para el Logo.
@@ -10,11 +10,12 @@ import { NavigationContainer } from '@react-navigation/native';
 import { getStart } from '../appfunc/getStart.js';
 
 
+
 const Drawer = createDrawerNavigator();
 
 function homeScreen({ navigation }) {
-    StatusBar.setHidden(true);
 
+    StatusBar.setHidden(true);
     
     return (
 
@@ -52,13 +53,17 @@ function homeScreen({ navigation }) {
                             onPress={() => 
 
                               {
-
-                                if (getStart() == 0) {
-                                    Alert.alert('Obtiene JSON con prendas');
+                                let quantity=10;
+                                let screen="home";
+                                 getStart(quantity,screen)
+                                 .then(resp =>{
+                                    console.log(resp);
                                     
-                                } else {
-                                    Alert.alert('No existen prendas disponibles por el momento');
-                                }
+                                 })
+                                 .catch(err => {
+                                    Alert.alert('Ups!, No pudimos obtener las prendas');
+                                 }); 
+
         
                               }                           
                             
@@ -66,6 +71,7 @@ function homeScreen({ navigation }) {
                             title="Comenzar a ver"
                             color="#D16002"
                         />
+                       
                 </View>
             </ImageBackground>
         </View >

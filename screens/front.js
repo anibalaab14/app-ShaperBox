@@ -70,13 +70,8 @@ function frontPage({ navigation }) {
                         })
                         .catch(err => {
                             console.log(err);
-                            Alert.alert('Dispara JSON api-inicio-sesion');
+                            Alert.alert('Ups!, algo salió mal.');
                         });
-                        
-                        /*if (buttonSession(textUser, textPass) == 0) {
-                            Alert.alert('Dispara JSON api-inicio-sesion');
-                            navigation.navigate('Home');
-                        }*/
 
                     }}
 

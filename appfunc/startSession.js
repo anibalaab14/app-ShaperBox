@@ -1,4 +1,4 @@
-const axios = require('axios');
+
 import { URL_STARTSESSION } from "@env"
 
 const buttonSession = async (varUser, varPass) => {
@@ -25,7 +25,7 @@ const buttonSession = async (varUser, varPass) => {
 
 
     } catch (err) {
-        //console.err(err);
+        console.err(err);
         return err;
     }
 
