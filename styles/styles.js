@@ -15,10 +15,8 @@ export const styles = StyleSheet.create({
     },
     containerHome_2: {
         flex: 11,
-        alignItems: "center",
 
-        alignSelf:"center",
-        flexDirection: "row" 
+         
     },
     boxHeaderHome:{
         flex: 1,
@@ -33,6 +31,51 @@ export const styles = StyleSheet.create({
          
         
     },
+    boxBodyHome_A:{
+        flex: 1,
+        backgroundColor: "#FFFFFF",
+        justifyContent: "space-around",
+        alignItems: "center", 
+        
+    },
+    boxBodyHome_B:{
+        flex: 7,
+        backgroundColor: "#FFFFFF",
+        justifyContent: "space-around",
+        alignItems: "center", 
+        
+    },
+    boxBodyHome_BB:{
+        flex: 1,
+        backgroundColor: "#FFFFFF",
+        
+        
+        
+        
+    },
+    boxBodyHome_C:{
+        flex: 2,
+        backgroundColor: "#FFFFFF",
+        justifyContent: "space-around",
+        alignItems: "center", 
+        flexDirection: "row"
+    },
+    boxBodyHome_CA:{
+        flex: 1,
+        backgroundColor: "#FFFFFF",
+        justifyContent: "space-around",
+        alignItems: "center", 
+         
+        
+    },
+    boxBodyHome_D:{
+        flex: 1,
+        backgroundColor: "#FFFFFF",
+        justifyContent: "space-around",
+        alignItems: "center",     
+        
+    },
+
     containerOptions: {
         flex: 1,
         flexDirection: "column"      
