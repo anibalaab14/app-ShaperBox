@@ -21,9 +21,14 @@ function Swiper(props) {
                     return (typeof item.secure_url === 'string' && typeof item.filename === 'string' ?
                         <ScrollView key={index} onScrollEndDrag={(e) => handleClick(e, item)}>
                             <Image
-                                style={{ height: screenWidth, width: screenWidth }}
+                                style={{
+                                    height: screenWidth, width: screenWidth, borderTopLeftRadius: 30,
+                                    borderTopRightRadius: 30,
+                                    borderBottomRightRadius: 30,
+                                    borderBottomLeftRadius: 30,
+                                }}
                                 source={{ uri: item.secure_url }}
-                                
+
                             />
                             <View style={styles.imageText}>
                                 <Text style={[
