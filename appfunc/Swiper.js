@@ -15,14 +15,14 @@ function Swiper(props) {
     const { images, textSize, textColor, textBold, textUnderline, imageHeight } = props
 
     return (
-        <ScrollView horizontal={true} pagingEnabled={true} >
+        <ScrollView horizontal={true} pagingEnabled={true} showsHorizontalScrollIndicator={false}>
             {images &&
                 images.map((item, index) => {
-                    return (typeof item.url === 'string' && typeof item.name === 'string' ?
+                    return (typeof item.secure_url === 'string' && typeof item.filename === 'string' ?
                         <ScrollView key={index} onScrollEndDrag={(e) => handleClick(e, item)}>
                             <Image
                                 style={{ height: screenWidth, width: screenWidth }}
-                                source={{ uri: item.url }}
+                                source={{ uri: item.secure_url }}
                                 
                             />
                             <View style={styles.imageText}>
@@ -32,7 +32,7 @@ function Swiper(props) {
                                     typeof textColor === 'string' && { color: textColor },
                                     typeof textUnderline === 'boolean' && textUnderline && { textDecorationLine: 'underline' }
                                 ]}>
-                                    {item.name && item.name}
+                                    {item.filename && item.filename}
                                 </Text>
                             </View>
                         </ScrollView>
