@@ -5,6 +5,53 @@ export const styles = StyleSheet.create({
         flex: 1,
         
     },
+    containerFront_A: {
+        flex: 3,
+        
+    },
+    containerFront_B: {
+        flex: 1,
+        
+    },
+    containerFront_C: {
+        flex: 1,
+        flexDirection: "row"
+        
+    },
+    containerFront_CA: {
+        flex: 1,
+        
+    },
+    containerFront_CB: {
+        flex: 5,
+        alignSelf:"center",
+        
+        
+    },
+    containerFront_CC: {
+        flex: 1,
+        
+    },
+    containerFront_D: {
+        flex: 2,
+        flexDirection: "row",
+
+        
+        
+    },
+    containerFront_E: {
+        flex: 1,
+        flexDirection: "row"
+        
+    },
+    containerFront_G: {
+        flex: 1,
+        
+    },
+    containerFront_H: {
+        flex: 1,
+        
+    },
     containerHome: {
         flex: 1,
                 
@@ -159,25 +206,36 @@ export const styles = StyleSheet.create({
     textJoinsUs: {
         fontSize: 15,
         color: "#fff",
-        alignSelf: "center",
-        alignContent: "center",
+        textAlign:"center"
     },
     tinyLogo: {
-        width: 300,
-        height: 300,
+        width: 200,
+        height: 200,
         alignSelf: "center"
 
     },
     imageInBack: {
         flex: 1,
         resizeMode: "cover",
-
-
     },
     input: {
         height: 40,
         width: 300,        
         backgroundColor: "#FFF",
+        borderTopLeftRadius: 15,
+        borderTopRightRadius: 15,
+        borderBottomRightRadius: 15,
+        borderBottomLeftRadius: 15,
+        borderLeftWidth: 1,
+        borderTopWidth: 1,
+        borderRightWidth: 1,
+        borderBottomWidth: 1,
+        textAlign: "center",
+        
+    },
+    inputButtom: {
+        height: 40,
+        width: 300,        
         borderTopLeftRadius: 15,
         borderTopRightRadius: 15,
         borderBottomRightRadius: 15,
