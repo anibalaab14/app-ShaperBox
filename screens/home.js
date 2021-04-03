@@ -26,7 +26,7 @@ var state = {
 const Swipator = () => {
     let quantity = 10;
     let screen = "home";
-    componentDidMount () {
+    
         getStart(quantity, screen)
 
             .then(resp => {
@@ -44,7 +44,7 @@ const Swipator = () => {
             .catch(err => {
                 Alert.alert('Ups!, No pudimos obtener las prendas');
             })
-    }
+    
     var bottom = (e) => {
         Alert.alert('Swipe Bottom');
     }
@@ -67,6 +67,7 @@ const Swipator = () => {
     )
     // esta funcion tiene un problema... y es que carga lasd variables despues de haber actualizado el DOM de react. entonces... jamas cargará las URL desde la cloud... 
     // se deben usar hooks donde a cada instante actualiza el DOM (frente a cambios de información, utilizo un gancho que actualiza del DOM)...
+    // https://es.reactjs.org/docs/hooks-effect.html // esto ya esta implementado en front.js (en formulario inicio usuario). 
 }
 
 
