@@ -54,6 +54,7 @@ export const styles = StyleSheet.create({
     },
     containerHome: {
         flex: 1,
+        
                 
     },
     containerHome_1: {
@@ -62,7 +63,7 @@ export const styles = StyleSheet.create({
     },
     containerHome_2: {
         flex: 11,
-
+        
          
     },
     boxHeaderHome:{
@@ -119,7 +120,8 @@ export const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: "#FFFFFF",
         justifyContent: "space-around",
-        alignItems: "center",     
+        alignItems: "center",
+             
         
     },
 
