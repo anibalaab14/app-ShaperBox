@@ -7,13 +7,14 @@ import { Ionicons } from '@expo/vector-icons';
 import { buttonSession } from '../appfunc/startSession.js';
 import { LogoTitle } from '../appfunc/logoTitle.js';//En un futuro debo implementar esto para el Logo.
 import { getBoxesHistory } from '../appfunc/getBoxesHistory.js';
-
+import { LinearGradient } from 'expo-linear-gradient';
 
 function optionScreen({ navigation }) {
 
     return (
 
         <View style={styles.containerOptions}>
+            <LinearGradient colors={['#2C5364','#0cebeb']} style={styles.linearGradient}>
             <View style={styles.boxOptions_1}>
                 <View style={styles.boxSubOptions_1}>
                     <MaterialIcons name="local-shipping" size={24} color="black" />
@@ -129,6 +130,7 @@ function optionScreen({ navigation }) {
             <View style={styles.boxOptions_9}>
 
             </View>
+            </LinearGradient>
         </View>
 
 

@@ -3,34 +3,38 @@ import { Text, View, Image, ImageBackground, SafeAreaView, TextInput, Button, Al
 import { styles } from '../styles/styles.js';
 import { buttonSession } from '../appfunc/startSession.js';
 import { Flow, Circle, Fold } from 'react-native-animated-spinkit'
+import * as Animatable from 'react-native-animatable';
+import { LinearGradient } from 'expo-linear-gradient';
+
 
 function frontPage({ navigation }) {
 
     const [textUser, onChangeTextUser] = React.useState("");
     const [textPass, onChangeTextPass] = React.useState("");
     const [loadAnimation, setLoadAnimation] = React.useState(false);
-    const [accesible,setAccesible] = React.useState(false);
+    const [accesible, setAccesible] = React.useState(false);
 
-    
+
 
     StatusBar.setHidden(true);//Hide status bar
     React.useState(() => {
         console.log("Animacion de carga iniciada");
-    },[loadAnimation])
+    }, [loadAnimation])
     React.useState(() => {
         console.log("Cambia acceso a view principal");
-    },[accesible])
+    }, [accesible])
 
     return (
 
         <View style={styles.container}>
 
-            
-            <ImageBackground source={require('../images/Fondo2.jpg')} style={styles.imageInBack}>
+
+            <LinearGradient colors={['#000000','#000000', '#0cebeb']} style={styles.linearGradient}>
+
                 <View style={styles.containerFront_A}>
-                    <Image style={styles.tinyLogo} source={require('../images/Logo.jpg')} />
+                    <Animatable.Image animation="zoomInDown" style={styles.tinyLogo} source={require('../images/Logo.jpg')} />
                 </View>
-                <View style={styles.containerFront_B}>
+                <Animatable.View animation="zoomInUp" style={styles.containerFront_B}>
                     <SafeAreaView style={styles.initForm} accessible={accesible}>
                         <TextInput
                             style={styles.input}
@@ -50,18 +54,20 @@ function frontPage({ navigation }) {
                             secureTextEntry={true}
                         />
                     </SafeAreaView>
-                    
-                </View>
+
+                </Animatable.View>
                 <View style={styles.containerFront_C}>
                     <View style={styles.containerFront_CA}>
                     </View>
-                    <View style={styles.containerFront_CB}>
+                    
+                    <Animatable.View  animation="zoomInUp" style={styles.containerFront_CB}>
+                    
                         <Button
                             title="Iniciar sesión"
                             color="#D16002"
                             style={styles.inputButtom}
                             disabled={accesible}
-                            
+
                             //onPress={() => Alert.alert('Dispara JSON api-inicio-sesion')}
                             onPress={() => {
                                 setAccesible(true);
@@ -81,7 +87,7 @@ function frontPage({ navigation }) {
                                             Alert.alert('Usuario invalido');
                                             setAccesible(false);
                                             setLoadAnimation(false);
-                                            
+
 
                                         }
                                         if (resp.statusCode == 203) {
@@ -98,20 +104,22 @@ function frontPage({ navigation }) {
                                         console.log(err);
                                         Alert.alert('Ups!, algo salió mal.');
                                     });
-                                    
+
 
                             }}
 
                         />
+
+                    </Animatable.View>
                     
-                    </View>
                     <View style={styles.containerFront_CC}>
                     </View>
                 </View>
                 <View style={styles.containerFront_E}>
                     <View style={styles.containerFront_CA}>
                     </View>
-                    <View style={styles.containerFront_CB}>
+                   
+                    <Animatable.View animation="zoomInUp" style={styles.containerFront_CB}>
 
                         <Button
                             title="Suscríbete"
@@ -120,7 +128,8 @@ function frontPage({ navigation }) {
                             disabled={accesible}
                             style={styles.inputButtom}
                         />
-                    </View>
+                    </Animatable.View>
+                    
                     <View style={styles.containerFront_CC}>
                     </View>
                 </View>
@@ -128,20 +137,20 @@ function frontPage({ navigation }) {
                     <View style={styles.containerFront_CA}>
                     </View>
                     <View style={styles.containerFront_CB}>
-                        <Text style={styles.textJoinsUs}>¿QUE ESPERAS?</Text>
-                        <Text style={styles.textJoinsUs}>Únete a la plataforma de prendas por suscripción.</Text>
-                        <Text style={styles.textJoinsUs}>Vitrinea y arma tu BOX mensual. </Text>
-                        <Text style={styles.textJoinsUs}>Debes estar atento, el inventario cambia continuamente!</Text>
-                        
+                        <Animatable.Text animation="fadeInUp" duration={5000} delay={2000} style={styles.textJoinsUs}>¿QUE ESPERAS?</Animatable.Text>
+                        <Animatable.Text animation="fadeInUp" duration={5000} delay={2000} style={styles.textJoinsUs}>Únete a la plataforma de prendas por suscripción.</Animatable.Text>
+                        <Animatable.Text animation="fadeInUp" duration={5000} delay={2000} style={styles.textJoinsUs}>Vitrinea y arma tu BOX mensual. </Animatable.Text>
+                        <Animatable.Text animation="fadeInUp" duration={5000} delay={2000} style={styles.textJoinsUs}>Debes estar atento, el inventario cambia continuamente!</Animatable.Text>
+
                     </View>
                     <View style={styles.containerFront_CC}>
                     </View>
                 </View>
 
                 <View style={styles.containerFront_G}>
-                <Flow size={110} color="rgba(88,240,255,1)" style={styles.containerFront_CB} animating={loadAnimation}/>
+                    <Flow size={110} color="rgba(88,240,255,1)" style={styles.containerFront_CB} animating={loadAnimation} />
                 </View>
-            </ImageBackground>
+            </LinearGradient>
         </View>
     );
 }
