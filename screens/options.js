@@ -8,6 +8,7 @@ import { buttonSession } from '../appfunc/startSession.js';
 import { LogoTitle } from '../appfunc/logoTitle.js';//En un futuro debo implementar esto para el Logo.
 import { getBoxesHistory } from '../appfunc/getBoxesHistory.js';
 import { LinearGradient } from 'expo-linear-gradient';
+import * as Animatable from 'react-native-animatable';
 
 function optionScreen({ navigation }) {
 
@@ -19,7 +20,8 @@ function optionScreen({ navigation }) {
                 <View style={styles.boxSubOptions_1}>
                     <MaterialIcons name="local-shipping" size={24} color="black" />
                 </View>
-                <View style={styles.boxSubOptions_2}>
+                
+                <Animatable.View  animation="zoomInUp" style={styles.boxSubOptions_2}>
                     <Button
                         onPress={() => {
 
@@ -34,7 +36,7 @@ function optionScreen({ navigation }) {
                         title="Pedidos"
                         color="#000000"
                     />
-                </View>
+                </Animatable.View>
                 <View style={styles.boxSubOptions_1}>
 
                 </View>
@@ -43,13 +45,13 @@ function optionScreen({ navigation }) {
                 <View style={styles.boxSubOptions_1}>
                     <MaterialIcons name="notifications-none" size={24} color="black" />
                 </View>
-                <View style={styles.boxSubOptions_2}>
+                <Animatable.View  animation="zoomInUp" style={styles.boxSubOptions_2}>
                     <Button
                         onPress={() => Alert.alert('Pantalla notifications')}
                         title="Notificaciones"
                         color="#000000"
                     />
-                </View>
+                </Animatable.View>
                 <View style={styles.boxSubOptions_1}>
 
                 </View>
@@ -58,13 +60,13 @@ function optionScreen({ navigation }) {
                 <View style={styles.boxSubOptions_1}>
                     <AntDesign name="user" size={24} color="black" />
                 </View>
-                <View style={styles.boxSubOptions_2}>
+                <Animatable.View  animation="zoomInUp" style={styles.boxSubOptions_2}>
                     <Button
                         onPress={() => Alert.alert('Pantalla User')}
                         title="Usuario"
                         color="#000000"
                     />
-                </View>
+                </Animatable.View>
                 <View style={styles.boxSubOptions_1}>
 
                 </View>
@@ -73,13 +75,13 @@ function optionScreen({ navigation }) {
                 <View style={styles.boxSubOptions_1}>
                     <Ionicons name="help-buoy-outline" size={24} color="black" />
                 </View>
-                <View style={styles.boxSubOptions_2}>
+                <Animatable.View  animation="zoomInUp" style={styles.boxSubOptions_2}>
                     <Button
                         onPress={() => Alert.alert('Pantalla help')}
                         title="Ayuda"
                         color="#000000"
                     />
-                </View>
+                </Animatable.View>
                 <View style={styles.boxSubOptions_1}>
 
                 </View>
@@ -88,13 +90,13 @@ function optionScreen({ navigation }) {
                 <View style={styles.boxSubOptions_1}>
                     <AntDesign name="infocirlceo" size={24} color="black" />
                 </View>
-                <View style={styles.boxSubOptions_2}>
+                <Animatable.View  animation="zoomInUp" style={styles.boxSubOptions_2}>
                     <Button
                         onPress={() => Alert.alert('Pantalla informations')}
                         title="Informaciones"
                         color="#000000"
                     />
-                </View>
+                </Animatable.View>
                 <View style={styles.boxSubOptions_1}>
 
                 </View>
@@ -114,7 +116,7 @@ function optionScreen({ navigation }) {
                 <View style={styles.boxSubOptions_1}>
                     <Ionicons name="exit" size={24} color="black" />
                 </View>
-                <View style={styles.boxSubOptions_2}>
+                <Animatable.View  animation="bounceInRight" style={styles.boxSubOptions_2}>
                     <Button
                         onPress={() => navigation.navigate('Front')}
                         title="Cerrar sesion"
@@ -122,7 +124,7 @@ function optionScreen({ navigation }) {
                         style={styles.closeSesionButton}
 
                     />
-                </View>
+                </Animatable.View>
                 <View style={styles.boxSubOptions_1}>
 
                 </View>

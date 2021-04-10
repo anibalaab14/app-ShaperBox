@@ -33,9 +33,39 @@ const App = () => {
                         />
                     ),
                 }} />
-                <Stack.Screen name="Options" component={optionScreen} />
-                <Stack.Screen name="MyBox" component={myBoxScreen} />
-                <Stack.Screen name="Register" component={myRegisterScreen} />
+                <Stack.Screen name="Options" component={optionScreen} options={{
+                    headerStyle: {
+                        backgroundColor: '#2C5364',
+                        
+                    },
+                    headerTitleStyle: {
+
+                        color: "#000000"
+                    },
+
+                }}/>
+                <Stack.Screen name="MyBox" component={myBoxScreen} options={{
+                    headerStyle: {
+                        backgroundColor: '#2C5364',
+                        
+                    },
+                    headerTitleStyle: {
+
+                        color: "#000000"
+                    },
+
+                }}/>
+                <Stack.Screen name="Register" component={myRegisterScreen} options={{
+                    headerStyle: {
+                        backgroundColor: '#2C5364',
+                        
+                    },
+                    headerTitleStyle: {
+
+                        color: "#000000"
+                    },
+
+                }}/>
             </Stack.Navigator>
         </NavigationContainer>
 
