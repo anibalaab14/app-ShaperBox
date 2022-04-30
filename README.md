@@ -1,7 +1,7 @@
 # INFO
 
 This is a project created with expo and react-native.
-microservices are in the backend and deploy in heroku cloud, db is mongodb atlas. 
+microservices are in the backend and deploy in heroku cloud, db is mongodb atlas, images in cloudinary.  
 
 # FOR START
 
